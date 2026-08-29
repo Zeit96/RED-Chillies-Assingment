@@ -1,0 +1,427 @@
+{
+  "id": "23b41169-8935-4a6e-8fa6-010f051cf667",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 11,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        -496.37348422647466,
+        53.94260522725555
+      ],
+      "size": [
+        312.0254860047787,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.13.0",
+        "Node name for S&R": "UpscaleModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "4x_NMKD-Siax_200k.pth"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 8,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        -164.13273649130497,
+        163.34029579945317
+      ],
+      "size": [
+        259.8348590359873,
+        46
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 5
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.13.0",
+        "Node name for S&R": "ImageUpscaleWithModel",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -595.3457036137837,
+        163.34029579945317
+      ],
+      "size": [
+        412.93467192717935,
+        496.0708525637052
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            6
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.13.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "img_00074_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "PixaromaPreview",
+      "pos": [
+        1136.6142111293818,
+        166.9584970833074
+      ],
+      "size": [
+        571.7690625569805,
+        612.453689345507
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "pixaroma/ComfyUI-Pixaroma",
+        "ver": "a13e16f26ce1b1de096fe97ded9b95ec3d2b62ab",
+        "Node name for S&R": "PixaromaPreview",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "pixaromaFrames": [
+          {
+            "filename": "comfy_00001_.png",
+            "subfolder": "",
+            "type": "output"
+          }
+        ],
+        "pixaromaSelected": 0,
+        "pixaromaExpanded": false
+      },
+      "widgets_values": [
+        "comfy",
+        "save"
+      ],
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 11,
+      "type": "SaveImage",
+      "pos": [
+        857.2140740979185,
+        1.664235093247358
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.27.0",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "ImageScaleBy",
+      "pos": [
+        113.9804177399817,
+        163.34029579945317
+      ],
+      "size": [
+        235.1976913694782,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.13.0",
+        "Node name for S&R": "ImageScaleBy",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 6,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        367.4564043047593,
+        163.34029579945317
+      ],
+      "size": [
+        412.93467192717935,
+        496.0708525637052
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "images",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "8ff50e4521881eca1fe26aec9615fc9362474931",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_odugf_00007_.png&type=temp&subfolder=&rand=0.4693227509765622"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_odugf_00008_.png&type=temp&subfolder=&rand=0.4985017243805576"
+          }
+        ]
+      ]
+    }
+  ],
+  "links": [
+    [
+      3,
+      2,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      7,
+      0,
+      8,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      6,
+      2,
+      0,
+      8,
+      1,
+      "IMAGE"
+    ],
+    [
+      7,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      9,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      10,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      9,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.8390545288824501,
+      "offset": [
+        1439.710637744595,
+        240.75673003047652
+      ]
+    },
+    "frontendVersion": "1.47.12",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}

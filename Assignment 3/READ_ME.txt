@@ -1,0 +1,1 @@
+Work for this assignment was a bit new to me. I knew about SAM3 but never used it myself. This assignment gave me the opportunity & I am defintely impressed by it. I used different kind of images to seperate different kind of objects. I used the default SAM3 image segmentation workflow that comes with ComfyUI. I have also uploadeed it here.

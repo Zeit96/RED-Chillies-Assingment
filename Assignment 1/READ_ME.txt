@@ -1,0 +1,3 @@
+For this assignment, I first tried Krea 2 & Z image turbo models as I already had them downloaded & functioning. But unfortunately these are not built for inpainting & outpainiting. So the outputs were not good. I scraped the idea of using them & looked for better models which are good at this kind of jobs. I found Flux 2 Klein9B. Downloaded some workflows from the internet, downloaded the required models, text encoders & vaes. Then ran it. Results were really good.
+
+For upscalling I used 4x_NMKD-Siax_200k.pth upscaler model. The model size is quite small & it worked great from first try. So I didnt need to use anything else. I have put all these mentioned workflows in their respective folders.

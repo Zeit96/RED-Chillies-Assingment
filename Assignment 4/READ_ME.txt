@@ -1,0 +1,1 @@
+This assginment was out of my boundaries & I was not supposed to work on it. But I wanted to give it a try as it was a fairly simple assignment for AI atleast. So I created this simple Kanban board heavily assisted by AI. Then I tested manually if all the features are working or not. Also changed the name of the board through modification inside coding.

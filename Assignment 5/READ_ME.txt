@@ -1,0 +1,1 @@
+To be honest, this assigment was even more difficult for me to understand than assingment 4. But again, as there's no restrictions on using AI, I used Claude again to build it.
